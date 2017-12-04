@@ -100,10 +100,18 @@ void multiply_matrix(int **&matrix,int &x,int &y) {
 		cout<<"matrix is empty"<<endl;
 		return;
 	}
-	int x_m;
-	int y_m;
-	cout << "please enter size matrix X*Y" << endl;
-	cin >> x_m >> y_m;
+	string matrix_size;
+	int x_m=0;
+	int y_m=0;
+	cout << "please enter size matrix" << endl;
+	cin>>matrix_size;
+	x_m=atoi(matrix_size.c_str());
+	if(matrix_size.find('x')!=string::npos)
+		matrix_size.erase(0,matrix_size.find('x')+1);
+	if(matrix_size.find('X')!=string::npos)
+		matrix_size.erase(0,matrix_size.find('X')+1);
+	y_m=atoi(matrix_size.c_str());
+
 	if (y != x_m || y_m==0) {
 		cout << "wrong size" << endl;
 		return;
