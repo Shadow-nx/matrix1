@@ -96,6 +96,10 @@ void summ_matrix(int **&matrix,int &x,int &y) {
 
 }
 void multiply_matrix(int **&matrix,int &x,int &y) {
+	if(matrix==nullptr) {
+		cout<<"matrix is empty"<<endl;
+		return;
+	}
 	int x_m;
 	int y_m;
 	cout << "please enter size matrix X*Y" << endl;
