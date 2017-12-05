@@ -132,6 +132,8 @@ void multiply_matrix(int **&matrix,int &x,int &y) {
 			for (int j = 0; j < y_m; j++)
 				for (int p = 0; p < y; p++)
 					matrix_m[i][j] += matrix[i][p] * matrix1[p][j];
+	    for(int i=0;i<x;i++)
+	        delete []matrix[i];
 		delete [] matrix;
 		x=x;
 		y=y_m;
@@ -152,7 +154,8 @@ void transpose_matrix(int **&matrix,int &x,int &y) {
 	for(int i=0; i<y; i++)
 		for(int j=0; j<x; j++)
 			matrix_t[i][j]=matrix[j][i];
-
+    for(int i=0;i<x;i++)
+        delete []matrix[i];
 	delete [] matrix;
 	matrix=nullptr;
 	matrix=matrix_t;
