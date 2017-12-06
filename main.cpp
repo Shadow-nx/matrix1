@@ -80,7 +80,7 @@ void summ_matrix(int **&matrix,int &x,int &y) {
 	int **matrix_sum=new int*[x];
 	for(int i=0; i<x; i++)
 		matrix_sum[i]=new int[y];
-	cout<<"please enter matrix 3x3"<<endl;
+	cout<<"please enter matrix:"<<x<<"x"<<y<<endl;
 	for(int i=0; i<x; i++)
 		for(int j=0; j<y; j++)
 			cin>>matrix_sum[i][j];
